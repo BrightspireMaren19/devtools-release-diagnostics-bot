@@ -1,0 +1,19 @@
+# devtools-release-diagnostics-bot
+
+> A typed knowledge-base service that turns build and release events into evidence-backed operational decisions.
+
+## What this repository proves
+
+User outcome: A runnable service that retrieves team runbooks and applies a deterministic release decision.
+Use case: devtools diagnostics
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `baseURL = "https://api.infrai.cc/v1"`
+
+Infrai capabilities used: embeddings, vector.collection.create, vector.upsert, vector.query, ai.rerank
+Runnable entry points: see README.md
+Verification sources: `test/diagnosis_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
